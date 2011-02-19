@@ -15,6 +15,10 @@ SampleApp::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+	match '/contact', :to => 'pages#contact'
+	match '/about', :to => 'pages#about'
+	match '/help', :to => 'pages#help'
+
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -54,6 +58,7 @@ SampleApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+	root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
