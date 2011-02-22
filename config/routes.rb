@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
   get "pages/contact"
   get "pages/about"
@@ -14,7 +16,7 @@ SampleApp::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+	match '/signup', :to => 'users#new'
 	match '/contact', :to => 'pages#contact'
 	match '/about', :to => 'pages#about'
 	match '/help', :to => 'pages#help'
