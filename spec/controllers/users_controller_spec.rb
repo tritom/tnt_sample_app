@@ -16,12 +16,12 @@ describe UsersController do
     end
   end
 
-	decribe "GET 'show'" do
+	describe "GET 'show'" do
 
 		before(:each) do
 			User.create!({:name => "Sample User", :email => "sample@user.com"})
 		end
 
-		it "should be successful" 
-
+		it "should be successful"
+	end
 end
