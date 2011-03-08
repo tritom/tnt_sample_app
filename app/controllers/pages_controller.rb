@@ -12,6 +12,10 @@ class PagesController < ApplicationController
   end
 
 	def help
+		if params[:id]
+		@title = params[:id]
+		else
 		@title = "Help"
+		end
 	end
 end
